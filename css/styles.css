@@ -7,79 +7,210 @@
 
 /* Body Styling */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa; /* Updated to Light grey */
+    color: #333333; /* Primary Text Color */
+    padding: 20px;
+}
+
+/* Container Layout */
+.container {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto; /* Center the container */
     padding: 20px;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #333;
-    color: #fff;
+    background-color: #333333; /* Deep grey for contrast */
     padding: 10px 0;
     margin-bottom: 20px;
 }
 
-nav ul {
+.navbar {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-nav ul li {
+.navbar li {
     margin: 0 15px;
 }
 
-nav ul li a {
-    color: #fff;
+.navbar li a {
+    color: #ffffff; /* White text for links */
     text-decoration: none;
     font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.navbar li a:hover {
+    background-color: #0056b3; /* Deep blue hover for links */
+    color: #ffffff;
+}
+
+.navbar li a.active {
+    background-color: #0056b3; /* Deep blue for active link */
+    color: #ffffff;
 }
 
 /* Main Content */
 main {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
 }
 
 /* Headings */
-h1, h2, h3 {
+h1 {
+    font-size: 32px;
     margin-bottom: 15px;
-    color: #333;
+    color: #333333;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333333;
 }
 
 /* Paragraphs */
 p {
     margin-bottom: 15px;
-    line-height: 1.8;
+    line-height: 1.6; /* Updated to match project requirement */
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: #0056b3; /* Deep blue */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #007bff; /* Light blue on hover */
+}
+
+.button:active {
+    background-color: #004494; /* Dark blue on active */
 }
 
 /* Links */
 a {
-    color: #0066cc;
+    color: #0056b3; /* Deep blue */
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #007bff; /* Light blue */
+    text-decoration: none; /* Remove underline on hover */
 }
 
-/* Responsive Design */
+a:active {
+    color: #004494; /* Dark blue */
+}
+
+/* Features Grid */
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feature-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1 1 30%; /* Responsive flex basis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-item h3 {
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    margin-bottom: 15px;
+}
+
 @media (max-width: 768px) {
-    nav ul {
+    .navbar {
         flex-direction: column;
         align-items: center;
     }
 
-    nav ul li {
+    .navbar li {
         margin: 10px 0;
     }
+
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* About Section */
+.about-section {
+    margin-top: 40px;
+}
+
+.about-section h2 {
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    margin-bottom: 15px;
+}
+
+/* Intro Section */
+.intro-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro-section h1 {
+    margin-bottom: 20px;
+}
+
+.intro-section p {
+    margin-bottom: 20px;
+}
+
+.intro-section .button {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    border-radius: 5px;
 }
